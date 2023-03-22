@@ -20,15 +20,15 @@ galleryRef.addEventListener('click', onClickImage);
 function onClickImage(event) {
   event.preventDefault();
   if (event.target.nodeName !== "IMG") { return; }
-  window.addEventListener('keydown', onEscDown,)
+  document.addEventListener('keydown', onEscDown,)
   basicLightbox.create(`<img width="1400" height="900" src="${event.target.dataset.source}" alt="${event.target.alt}">`).show();
 }
 
 function onEscDown(event) {
   if (event.code === 'Escape') {
     const modalRef = document.querySelector("div.basicLightbox");
-    modalRef.remove()
-    window.removeEventListener('keydown', onEscDown,)
+    modalRef.remove();
+    document.removeEventListener('keydown', onEscDown,)
   }
 }
 
