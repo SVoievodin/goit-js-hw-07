@@ -14,9 +14,9 @@ galleryRef.insertAdjacentHTML("afterbegin", imgListRef);
 galleryRef.addEventListener('click', onClickImage);
 
 function onClickImage(event) {
-    event.preventDefault();
-    if (event.target.nodeName !== "IMG") { return; }
-    new SimpleLightbox('ul.gallery a', { captionsData: 'alt', captionDelay: 250});
-    }
+   event.preventDefault();
+   if (event.target.nodeName !== "IMG") { return; }
+}
+const lightbox = new SimpleLightbox('ul.gallery a', { captionsData: 'alt', captionDelay: 250 });
 
 
